@@ -4,12 +4,18 @@ try:
     data = json.load(file)
     username = str(data["username"])
     password = str(data["password"])
+    reason = str(data["reason"])
+    site = str(data["site"])
 except:
     username = input("username: ")
     password = input("password: ")
+    reason = input("reason: ")
+    site = input("site: ")
     dic = {
         "username":username,
-        "password":password
+        "password":password,
+        "reason":reason,
+        "site":site
     }
     with open("ur_ps.json","w") as outfile:
         json.dump(dic,outfile)
