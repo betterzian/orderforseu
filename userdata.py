@@ -1,6 +1,6 @@
 import json
 try:
-    file = open('ur_ps.json','r')
+    file = open('./data/ur_ps.json','r')
     data = json.load(file)
     username = str(data["username"])
     password = str(data["password"])
@@ -17,7 +17,7 @@ except:
         "reason":reason,
         "site":site
     }
-    with open("ur_ps.json","w") as outfile:
+    with open("./data/ur_ps.json","w") as outfile:
         json.dump(dic,outfile)
 
 start_time = "11:00"
