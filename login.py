@@ -14,7 +14,7 @@ option.add_experimental_option("detach", True)
 option.add_experimental_option('useAutomationExtension', False)
 option.add_experimental_option('excludeSwitches', ['enable-automation'])
 
-browser = webdriver.Chrome(chrome_options=option)
+browser = webdriver.Chrome(options=option)
 browser.execute_script(script)
 browser.get("http://ehall.seu.edu.cn/appShow?appId=5869188708264821")
 browser.find_element_by_id("username").send_keys(userdata.username)
