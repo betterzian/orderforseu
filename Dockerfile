@@ -9,4 +9,4 @@ VOLUME ./data:/usr/share/mypython/data
 ADD login.py /usr/share/mypython
 ADD userdata.py /usr/share/mypython
 WORKDIR /usr/share/mypython
-CMD ["/bin/bash"]
+CMD /bin/bash 'python3 login.py'
