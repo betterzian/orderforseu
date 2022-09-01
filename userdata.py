@@ -20,5 +20,5 @@ except:
     with open("./data/ur_ps.json","w") as outfile:
         json.dump(dic,outfile)
 
-start_time = "11:00"
-end_time = "23:50"
+start_time = "06:00"
+end_time = "23:55"
