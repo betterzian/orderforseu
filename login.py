@@ -64,6 +64,7 @@ browser.find_element_by_xpath("//a[@data-action='请假保存']").click()
 time.sleep(random.uniform(0.5,1.5))
 #自动申报
 browser.get("http://ehall.seu.edu.cn/appShow?appId=5821102911870447")
+time.sleep(10)
 browser.find_element_by_xpath("//div[@data-action='add']").click()
 time.sleep(random.uniform(0.5,1.5))
 temp = random.randint(5,9)
