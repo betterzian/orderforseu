@@ -62,15 +62,17 @@ browser.find_element_by_xpath("//div[@class='bh-paper-pile-dialog single ']/foll
 time.sleep(random.uniform(0.5,1.5))
 browser.find_element_by_xpath("//a[@data-action='请假保存']").click()
 time.sleep(random.uniform(0.5,1.5))
+
 #自动申报
 browser.get("http://ehall.seu.edu.cn/appShow?appId=5821102911870447")
 time.sleep(10)
 browser.find_element_by_xpath("//div[@data-action='add']").click()
-time.sleep(random.uniform(0.5,1.5))
+time.sleep(random.uniform(2,2.5))
 temp = random.randint(5,9)
 browser.find_element_by_xpath("//input[@data-name='DZ_JSDTCJTW']").send_keys("36."+str(temp))
-time.sleep(random.uniform(0.5,1.5))
+time.sleep(random.uniform(1,1.5))
 browser.find_element_by_xpath("//div[@data-action='save']").click()
-time.sleep(random.uniform(0.5,1.5))
+time.sleep(random.uniform(1,1.5))
+browser.find_element_by_xpath("//a[@class='bh-dialog-btn bh-bg-primary bh-color-primary-5']").click()
 
 browser.close()
