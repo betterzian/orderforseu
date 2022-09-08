@@ -3,12 +3,12 @@ USER root
 ENV TZ=Asia/Shanghai \
     DEBIAN_FRONTEND=noninteractive
 
-RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-    && apt-get update \
-    && apt-get install -y python3-pip \
-    && pip3 install selenium==3.141.0 \
-    && mkdir /usr/share/mypython \
-    && mkdir /usr/share/mypython/data
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
+RUN apt-get update 
+RUN apt-get install -y python3-pip 
+RUN pip3 install selenium==3.141.0 
+RUN mkdir /usr/share/mypython 
+RUN mkdir /usr/share/mypython/data
 VOLUME /usr/share/mypython/data
 ADD login.py /usr/share/mypython
 ADD userdata.py /usr/share/mypython
