@@ -1,8 +1,5 @@
 FROM selenium/standalone-chrome:104.0-chromedriver-104.0
 USER root
-ENV TZ=Asia/Shanghai \
-    DEBIAN_FRONTEND=noninteractive
-
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
 RUN apt-get update 
 RUN apt-get install -y python3-pip 
